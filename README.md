@@ -79,6 +79,7 @@ http://localhost:3000
 
 #### Tambah Buku Baru
 - **Kegunaan:** Menambahkan data buku baru. Nilai `available_copies` akan otomatis disamakan dengan `total_copies` pada saat pembuatan.
+*(Catatan: `author_id` dan `category_id` wajib menggunakan ID yang sudah ada / dibuat sebelumnya pada entitas Penulis dan Kategori)*
 - **Method:** `POST`
 - **URL:** `/api/books`
 - **Body Request:** (JSON)
@@ -91,6 +92,7 @@ http://localhost:3000
     "total_copies": 10
   }
   ```
+*(Catatan: `author_id` dan `category_id` wajib menggunakan ID yang sudah ada / dibuat sebelumnya pada entitas Penulis dan Kategori)*
 
 ---
 
@@ -111,7 +113,7 @@ http://localhost:3000
   {
     "full_name": "Nama Lengkap Anggota",
     "email": "email.anggota@example.com",
-    "member_type": "Tipe Anggota (misal: Regular, Premium)"
+    "member_type": "STUDENT"
   }
   ```
 
@@ -137,5 +139,6 @@ http://localhost:3000
     "due_date": "2026-04-10"
   }
   ```
+*(Catatan: `book_id` dan `member_id` wajib menggunakan ID yang sudah ada / dibuat sebelumnya pada entitas Buku dan Anggota)*
 
 ---
