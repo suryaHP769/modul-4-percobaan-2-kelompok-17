@@ -9,7 +9,7 @@
 
 ## Base URL
 - Production alias: https://smart-library-api-kel17.vercel.app
-- Latest production deployment: https://smart-library-api-kel17-8fuftrwbh-suryas-projects-b5874436.vercel.app
+- Latest production deployment: https://smart-library-api-kel17-qteza383v-suryas-projects-b5874436.vercel.app
 
 ## Environment Variables
 - DATABASE_URL configured for: production, development
