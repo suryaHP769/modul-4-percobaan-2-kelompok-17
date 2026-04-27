@@ -13,6 +13,16 @@ Secara default, API berjalan di:
 http://localhost:3000
 ```
 
+Deployment Vercel (production):
+```text
+https://smart-library-api-kel17.vercel.app
+```
+
+Dokumentasi tugas:
+- `docs/LAPORAN_IMPLEMENTASI.md`
+- `docs/DEPLOYMENT_INFO.md`
+- `docs/POSTMAN_SCREENSHOT_CHECKLIST.md`
+
 ---
 
 ## Daftar API Endpoints
