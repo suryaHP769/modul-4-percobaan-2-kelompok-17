@@ -12,6 +12,16 @@ export const BookController = {
 
   async createBook(req, res) {
     try {
+      const { isbn, title, author_id, category_id, total_copies } = req.body;
+      
+      // Validasi input
+      if (!isbn || !title || !author_id || !category_id || !total_copies) {
+        return res.status(400).json({ 
+          error: 'Semua field harus diisi: isbn, title, author_id, category_id, total_copies',
+          received: req.body
+        });
+      }
+      
       const newBook = await BookModel.create(req.body);
       res.status(201).json(newBook);
     } catch (err) {

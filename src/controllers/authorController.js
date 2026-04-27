@@ -12,6 +12,15 @@ export const AuthorController = {
   async addAuthor(req, res) {
     try {
       const { name, nationality } = req.body;
+      
+      // Validasi input
+      if (!name || !nationality) {
+        return res.status(400).json({ 
+          error: 'Nama dan Nasionalitas harus diisi!',
+          received: req.body 
+        });
+      }
+      
       const author = await AuthorModel.create(name, nationality);
       res.status(201).json(author);
     } catch (err) {

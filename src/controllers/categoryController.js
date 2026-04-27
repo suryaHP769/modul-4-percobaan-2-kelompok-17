@@ -11,7 +11,15 @@ export const CategoryController = {
   },
   async addCategory(req, res) {
     try {
-      const category = await CategoryModel.create(req.body.name);
+      const { name } = req.body;
+      
+      if (!name) {
+        return res.status(400).json({ 
+          error: 'Nama kategori harus diisi!' 
+        });
+      }
+      
+      const category = await CategoryModel.create(name);
       res.status(201).json(category);
     } catch (err) {
       res.status(400).json({ error: err.message });
